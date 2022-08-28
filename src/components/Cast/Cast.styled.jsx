@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const Ul = styled.ul`
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   background-color: #e9def0;
   padding-top: 30px;
   margin: 0;

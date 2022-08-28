@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 
 import { fetchPopularMovies } from 'service/api/movies';
 
-import { Ul, Li, LinkStyle } from '../Card/Card.styled';
+import Loader from 'components/Loader/Loader';
 
-import { FiHeart } from 'react-icons/fi';
+import { Ul, Li, LinkStyle, Img, P } from '../Card/Card.styled';
 
 const Card = () => {
   const [state, setState] = useState({
@@ -40,16 +40,21 @@ const Card = () => {
   }, []);
 
   const { items, loading, error } = state;
-  const elements = items.map(({ id, title }) => (
-    <Li>
-      <FiHeart />
-      <LinkStyle to={`/${id}`}>{title}</LinkStyle>
-    </Li>
-  ));
+  const elements = items.map(({ id, title, poster_path }) => {
+    const poster = `https://image.tmdb.org/t/p/w342/${poster_path}`;
+    return (
+      <Li key={id}>
+        <LinkStyle to={`/movies/${id}`}>
+          <Img src={poster_path ? poster : null} alt={title} />
+          <P>{title}</P>
+        </LinkStyle>
+      </Li>
+    );
+  });
   return (
     <div>
       <Ul>{elements}</Ul>
-      {loading && <p>...loading</p>}
+      {loading && <Loader />}
       {error && <p>...Movies not found</p>}
     </div>
   );

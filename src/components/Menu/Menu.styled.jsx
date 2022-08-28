@@ -5,22 +5,22 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
-    to bottom,
-    #f4cde3,
-    #edcde9,
-    #e5ceee,
-    #dacff3,
-    #cfd0f6,
-    #ccd0f7,
-    #c8d0f8,
-    #c4d0f9,
-    #cacef9,
-    #d0ccf9,
-    #d6c9f8,
-    #ddc7f6
+    to left,
+    #aeeee6,
+    #a1ece5,
+    #92eae4,
+    #83e8e3,
+    #71e6e3,
+    #65e1de,
+    #58dcd8,
+    #49d7d3,
+    #41cec7,
+    #3ac6bb,
+    #33bdb0,
+    #2db5a4
   );
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    0px 2px 2px 2px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 `;
 
 export const Ul = styled.ul`
