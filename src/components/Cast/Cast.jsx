@@ -45,20 +45,17 @@ const Cast = () => {
 
   const { item, loading, error } = state;
 
-  const elements =
-    item.length !== 0
-      ? item.map(({ id, name, profile_path }) => {
-          if (profile_path !== null) {
-            const poster = `https://image.tmdb.org/t/p/w342/${profile_path}`;
-            return (
-              <Li key={id}>
-                <Img src={poster} alt={name} />
-                <P>{name}</P>
-              </Li>
-            );
-          }
-        })
-      : null;
+  const elements = item?.map(({ id, name, profile_path }) => {
+    const poster = profile_path
+      ? `https://image.tmdb.org/t/p/w342/${profile_path}`
+      : 'https://stringfixer.com/files/951711496.jpg';
+    return (
+      <Li key={id}>
+        <Img src={poster} alt={name} />
+        <P>{name}</P>
+      </Li>
+    );
+  });
 
   return (
     <div>

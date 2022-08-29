@@ -53,6 +53,8 @@ export const Button = styled.button`
     #33bdb0,
     #2db5a4
   );
+  display: flex;
+  align-items: center;
   cursor: pointer;
   border: none;
   font-weight: bold;

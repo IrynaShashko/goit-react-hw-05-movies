@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Menu from 'components/Menu/Menu';
 
 import HomePage from 'pages/HomePage/HomePage';
-import MoviesPage from 'pages/MoviesSearchPage/MoviesSearchPage';
+import MoviesPage from 'pages/MoviesPage/MoviesPage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 import SingleMoviePage from 'pages/SingleMoviePage/SingleMoviePage';
 import Cast from 'components/Cast/Cast';

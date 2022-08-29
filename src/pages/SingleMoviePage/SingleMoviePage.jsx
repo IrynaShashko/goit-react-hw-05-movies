@@ -8,6 +8,8 @@ import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 import { fetchSingleMovie } from 'service/api/movies';
 
+import { FiChevronsLeft } from 'react-icons/fi';
+
 import {
   Container,
   CardContainer,
@@ -72,7 +74,10 @@ const SingleMoviePage = () => {
 
   return (
     <Container>
-      <Button>Go back</Button>
+      <Button>
+        <FiChevronsLeft size={20} />
+        Go back
+      </Button>
       {state.loading && <Loader />}
       {state.error && <NotFoundPage />}
       <CardContainer key={id}>
