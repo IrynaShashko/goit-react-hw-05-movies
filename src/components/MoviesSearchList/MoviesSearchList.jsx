@@ -61,7 +61,7 @@ const MoviesSearchPage = () => {
     const poster = `https://image.tmdb.org/t/p/w342/${poster_path}`;
     return (
       <Li key={id}>
-        <LinkStyle to={`/movies/query=${id}`}>
+        <LinkStyle to={`/movies/query=${search}`}>
           <Img src={poster_path ? poster : null} alt={title} />
           <P>{title}</P>
         </LinkStyle>
