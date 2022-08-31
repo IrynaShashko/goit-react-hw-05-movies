@@ -16,7 +16,9 @@ export const Input = styled.input`
   padding: 10px 20px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  border: none;
+  border: 1px solid #ccc;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 export const Button = styled.button`
@@ -24,7 +26,9 @@ export const Button = styled.button`
   padding: 13px 15px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  border: none;
+  border: 1px solid #ccc;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   background-image: linear-gradient(
     to left,
     #aeeee6,

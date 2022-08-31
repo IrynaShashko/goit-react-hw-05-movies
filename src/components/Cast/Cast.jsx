@@ -6,7 +6,7 @@ import { fetchMovieCasts } from 'service/api/movies';
 
 import Loader from 'components/Loader/Loader';
 
-import { Ul, Li, Img, P } from '../Cast/Cast.styled';
+import { Div, Ul, Li, Img, P } from '../Cast/Cast.styled';
 
 const Cast = () => {
   const [state, setState] = useState({
@@ -58,11 +58,11 @@ const Cast = () => {
   });
 
   return (
-    <div>
+    <Div>
       {item.length !== 0 && <Ul>{elements}</Ul>}
       {loading && <Loader />}
       {error && <P>...Movies not found</P>}
-    </div>
+    </Div>
   );
 };
 

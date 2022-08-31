@@ -1,11 +1,10 @@
 import Card from 'components/Card/Card';
-import { Container } from 'pages/HomePage/HomePage.styled';
 
 const HomePage = () => {
   return (
-    <Container>
+    <div>
       <Card />
-    </Container>
+    </div>
   );
 };
 

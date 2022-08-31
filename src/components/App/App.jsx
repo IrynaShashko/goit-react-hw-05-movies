@@ -9,11 +9,9 @@ import SingleMoviePage from 'pages/SingleMoviePage/SingleMoviePage';
 import Cast from 'components/Cast/Cast';
 import Reviews from 'components/Reviews/Reviews';
 
-import { Container } from 'components/App/App.styled';
-
 export const App = () => {
   return (
-    <Container>
+    <div>
       <Menu />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -24,6 +22,6 @@ export const App = () => {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </Container>
+    </div>
   );
 };

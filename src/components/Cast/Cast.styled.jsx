@@ -2,11 +2,15 @@ import styled from '@emotion/styled';
 
 import { Link } from 'react-router-dom';
 
+export const Div = styled.div`
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+`;
+
 export const Ul = styled.ul`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  background-color: #e9def0;
   padding-top: 30px;
   margin: 0;
 `;
