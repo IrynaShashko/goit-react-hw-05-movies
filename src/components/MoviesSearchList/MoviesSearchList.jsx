@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
+import PropTypes from 'prop-types';
+
 import { fetchMoviesBySearchQuery } from 'service/api/movies';
 
 import MoviesSearchForm from 'components/MoviesSearchForm/MoviesSearchForm';
@@ -84,3 +86,7 @@ const MoviesSearchPage = () => {
 };
 
 export default MoviesSearchPage;
+
+MoviesSearchPage.propTypes = {
+  onSubmit: PropTypes.func,
+};

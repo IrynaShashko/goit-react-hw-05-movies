@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import PropTypes from 'prop-types';
 import {
   Div,
   Form,
@@ -43,3 +43,7 @@ const MoviesSearchForm = ({ onSubmit }) => {
 };
 
 export default MoviesSearchForm;
+
+MoviesSearchForm.propTypes = {
+  onSubmit: PropTypes.func,
+};
