@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
 import { fetchMoviesBySearchQuery } from 'service/api/movies';
 
@@ -19,6 +19,7 @@ const MoviesSearchPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const search = searchParams.get('query');
+  const location = useLocation();
 
   useEffect(() => {
     const fetchMoviesBySearch = async () => {
@@ -27,7 +28,6 @@ const MoviesSearchPage = () => {
       });
       try {
         const result = await fetchMoviesBySearchQuery(search);
-
         setState(prevState => {
           return {
             ...prevState,
@@ -56,7 +56,6 @@ const MoviesSearchPage = () => {
 
   const onSubmit = ({ search }) => {
     setSearchParams({ query: search });
-    console.log('searchPage', search);
   };
 
   const { items, loading, error } = state;
@@ -64,7 +63,10 @@ const MoviesSearchPage = () => {
     const poster = `https://image.tmdb.org/t/p/w342/${poster_path}`;
     return (
       <Li key={id}>
-        <LinkStyle to={`/movies/${id}?query=${search}`}>
+        <LinkStyle
+          state={{ from: location }}
+          to={`/movies/${id}?query=${search}`}
+        >
           <Img src={poster_path ? poster : null} alt={title} />
           <P>{title}</P>
         </LinkStyle>

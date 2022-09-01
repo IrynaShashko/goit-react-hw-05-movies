@@ -44,7 +44,7 @@ const Card = () => {
     const poster = `https://image.tmdb.org/t/p/w342/${poster_path}`;
     return (
       <Li key={id}>
-        <LinkStyle to={`/movies/${id}`}>
+        <LinkStyle state={{ from: '/' }} to={`/movies/${id}`}>
           <Img src={poster_path ? poster : null} alt={title} />
           <P>{title}</P>
         </LinkStyle>

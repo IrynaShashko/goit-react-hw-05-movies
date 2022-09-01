@@ -16,7 +16,6 @@ const MoviesSearchForm = ({ onSubmit }) => {
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
-    console.log(name, value);
     setState({ ...state, [name]: value });
   };
 
@@ -24,7 +23,6 @@ const MoviesSearchForm = ({ onSubmit }) => {
     e.preventDefault();
     onSubmit({ ...state });
     setState({ search: '' });
-    console.log('state.search.value', state.search);
   };
   return (
     <Div>

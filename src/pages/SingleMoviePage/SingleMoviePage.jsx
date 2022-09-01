@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import { useParams, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import Loader from 'components/Loader/Loader';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
@@ -33,6 +32,8 @@ const SingleMoviePage = () => {
   });
 
   const { id } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchSingleMovieById = async () => {
@@ -60,6 +61,8 @@ const SingleMoviePage = () => {
     fetchSingleMovieById();
   }, [id]);
 
+  const goBack = () => navigate(location.state.from);
+
   const { poster_path, title, genres, release_date, vote_average, overview } =
     state.item;
   const image = `https://image.tmdb.org/t/p/w342/${poster_path}`;
@@ -74,7 +77,7 @@ const SingleMoviePage = () => {
 
   return (
     <Container>
-      <Button>
+      <Button onClick={goBack}>
         <FiChevronsLeft size={20} />
         Go back
       </Button>
