@@ -33,6 +33,7 @@ const SingleMoviePage = () => {
 
   const { id } = useParams();
   const location = useLocation();
+  const from = location.state?.from || '/';
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -53,6 +54,7 @@ const SingleMoviePage = () => {
         setState(prevState => {
           return {
             ...prevState,
+            loading: false,
             error,
           };
         });
@@ -61,7 +63,7 @@ const SingleMoviePage = () => {
     fetchSingleMovieById();
   }, [id]);
 
-  const goBack = () => navigate(location.state.from);
+  const goBack = () => navigate(from);
 
   const { poster_path, title, genres, release_date, vote_average, overview } =
     state.item;
@@ -84,26 +86,36 @@ const SingleMoviePage = () => {
       {state.loading && <Loader />}
       {state.error && <NotFoundPage />}
       <CardContainer key={id}>
-        <Img src={image} alt={title} />
+        {genres && <Img src={image} alt={title} />}
         <InfoContainer>
-          <H2>
-            {title} ({release})
-          </H2>
-          <P>User score: {vote.toFixed()} %</P>
-          <H3>Overview</H3>
-          <P>{overview}</P>
-          <H3>Genres</H3>
+          {release && (
+            <H2>
+              {title} ({release})
+            </H2>
+          )}
+          {vote && <P>User score: {vote.toFixed()} %</P>}
+          {overview && <H3>Overview</H3>}
+          {overview && <P>{overview}</P>}
+          {genres && <H3>Genres</H3>}
           {genresMovie !== null && <P>{genresMovie}</P>}
         </InfoContainer>
       </CardContainer>
       <Div>
-        <P>Additional information:</P>
+        {genres && <P>Additional information:</P>}
         <Ul>
           <Li>
-            <NavLinkStyle to={`/movies/${id}/cast`}>Cast</NavLinkStyle>
+            {genres && (
+              <NavLinkStyle state={{ from }} to={`/movies/${id}/cast`}>
+                Cast
+              </NavLinkStyle>
+            )}
           </Li>
           <Li>
-            <NavLinkStyle to={`/movies/${id}/reviews`}>Reviews</NavLinkStyle>
+            {genres && (
+              <NavLinkStyle state={{ from }} to={`/movies/${id}/reviews`}>
+                Reviews
+              </NavLinkStyle>
+            )}
           </Li>
         </Ul>
       </Div>
