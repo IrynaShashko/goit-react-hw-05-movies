@@ -1,7 +1,8 @@
 .pagination {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  align-items: center;
+  padding: 10px 0;
   list-style: none;
   border: none;
 }
@@ -9,7 +10,7 @@
 .page-link {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 8px 14px;
   color: #0d7065;
   border-radius: 50px;
   text-decoration: none;

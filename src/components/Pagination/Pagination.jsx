@@ -1,5 +1,6 @@
 import ReactPaginate from 'react-paginate';
 import './Pagination.css';
+import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi';
 
 function PaginatedItems({ totalPages, setPage, currentPage }) {
   const handlePageClick = event => {
@@ -9,13 +10,13 @@ function PaginatedItems({ totalPages, setPage, currentPage }) {
   return (
     <>
       <ReactPaginate
-        nextLabel=">"
+        nextLabel={<BiChevronsRight size={18} />}
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         marginPagesDisplayed={1}
         pageCount={totalPages}
         forcePage={currentPage}
-        previousLabel="<"
+        previousLabel={<BiChevronsLeft size={18} />}
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"
