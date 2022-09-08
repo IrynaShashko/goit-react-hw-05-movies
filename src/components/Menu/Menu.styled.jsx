@@ -4,6 +4,10 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  top: 0px;
+  left: 0px;
+  position: sticky;
+  z-index: 1100;
   background-image: linear-gradient(
     to left,
     #aeeee6,

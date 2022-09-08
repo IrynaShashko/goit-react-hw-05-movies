@@ -34,6 +34,7 @@ const SingleMoviePage = () => {
   const { id } = useParams();
   const location = useLocation();
   const from = location.state?.from || '/';
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -85,7 +86,7 @@ const SingleMoviePage = () => {
       </Button>
       {state.loading && <Loader />}
       {state.error && <NotFoundPage />}
-      <CardContainer key={id}>
+      <CardContainer key={id} state={location}>
         {genres && <Img src={image} alt={title} />}
         <InfoContainer>
           {release && (
