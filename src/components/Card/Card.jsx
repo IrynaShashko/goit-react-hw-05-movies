@@ -36,7 +36,14 @@ const Card = () => {
       return (
         <Li key={id}>
           <LinkStyle state={{ from: location }} to={`/movies/${id}`}>
-            <Img src={poster_path ? poster : null} alt={title} />
+            <Img
+              src={
+                poster_path
+                  ? poster
+                  : 'https://stringfixer.com/files/951711496.jpg'
+              }
+              alt={title}
+            />
             <P>{title}</P>
           </LinkStyle>
         </Li>

@@ -22,43 +22,49 @@ export const Img = styled.img`
 `;
 
 export const H2 = styled.h2`
+  font-family: 'Roboto', sans-serif;
   font-size: 40px;
   margin: 0;
+  margin-bottom: 10px;
 `;
 
 export const H3 = styled.h3`
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   margin: 0;
+  margin-bottom: 10px;
 `;
 
 export const P = styled.p`
-  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   margin: 0;
+  margin-bottom: 10px;
 `;
 
 export const Button = styled.button`
   margin-bottom: 20px;
   background-image: linear-gradient(
-    to left,
-    #aeeee6,
-    #a1ece5,
-    #92eae4,
-    #83e8e3,
-    #71e6e3,
-    #65e1de,
-    #58dcd8,
-    #49d7d3,
-    #41cec7,
-    #3ac6bb,
-    #33bdb0,
-    #2db5a4
+    to right,
+    #065faf,
+    #1164b0,
+    #1b69b1,
+    #246eb2,
+    #2d73b2,
+    #3577b2,
+    #3c7ab2,
+    #437eb2,
+    #4b81b1,
+    #5385b1,
+    #5b88b0,
+    #628baf
   );
   display: flex;
   align-items: center;
   cursor: pointer;
   border: none;
-  font-weight: bold;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   border-radius: 50px;
   padding: 10px 20px;
   margin-top: 20px;
@@ -79,7 +85,7 @@ export const Div = styled.div`
 
 export const Ul = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style: none;
   margin-bottom: 0;
   padding: 0;
@@ -87,15 +93,16 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   margin: 0;
+  margin-right: 20px;
   padding: 0;
 `;
 
 export const NavLinkStyle = styled(NavLink)`
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Roboto', sans-serif;
   color: black;
-  font-weight: bold;
   &.active {
-    color: red;
+    color: #065faf;
   }
 `;

@@ -11,7 +11,8 @@
   position: relative;
   display: block;
   padding: 8px 14px;
-  color: #0d7065;
+  color: #3879b3;
+  font-family: 'Roboto', sans-serif;
   border-radius: 50px;
   text-decoration: none;
   background-color: #fff;
@@ -22,13 +23,14 @@
 
 .page-link:hover {
   z-index: 2;
-  background-color: #c8eee9;
-  border-color: #c8eee9;
+  background-color: #628baf;
+  border-color: #628baf;
+  color: #fff;
 }
 
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #2db5a4;
-  border-color: #2db5a4;
+  background-color: #065faf;
+  border-color: #065faf;
 }

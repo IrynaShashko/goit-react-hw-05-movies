@@ -12,19 +12,21 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: 1px solid #628baf;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 4px;
   margin-bottom: 10px;
 `;
 
 export const H3 = styled.h3`
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   margin: 0;
 `;
 
 export const P = styled.p`
-  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   margin: 0;
 `;

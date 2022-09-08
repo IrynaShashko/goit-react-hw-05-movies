@@ -9,22 +9,22 @@ export const Container = styled.div`
   position: sticky;
   z-index: 1100;
   background-image: linear-gradient(
-    to left,
-    #aeeee6,
-    #a1ece5,
-    #92eae4,
-    #83e8e3,
-    #71e6e3,
-    #65e1de,
-    #58dcd8,
-    #49d7d3,
-    #41cec7,
-    #3ac6bb,
-    #33bdb0,
-    #2db5a4
+    to right,
+    #065faf,
+    #1164b0,
+    #1b69b1,
+    #246eb2,
+    #2d73b2,
+    #3577b2,
+    #3c7ab2,
+    #437eb2,
+    #4b81b1,
+    #5385b1,
+    #5b88b0,
+    #628baf
   );
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 2px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2),
+    0px 2px 4px 2px rgba(0, 0, 0, 0.7), 0px 2px 1px -1px rgba(0, 0, 0, 0.1);
 `;
 
 export const Ul = styled.ul`
@@ -46,9 +46,10 @@ export const NavLinkStyle = styled(NavLink)`
   padding: 10px;
   text-decoration: none;
   color: black;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
   cursor: pointer;
   &.active {
-    color: red;
+    color: #fff;
   }
 `;

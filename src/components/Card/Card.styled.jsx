@@ -12,8 +12,7 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   margin-right: 16px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: none;
   border-radius: 8px;
   margin-bottom: 10px;
   text-align: center;
@@ -30,7 +29,7 @@ export const LinkStyle = styled(Link)`
   margin-right: 20px;
   &:hover {
     cursor: pointer;
-    color: #806d8c;
+    color: #065faf;
   }
 `;
 
@@ -43,7 +42,7 @@ export const Img = styled.img`
 `;
 
 export const P = styled.p`
-  font-size: 12px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  font-weight: bold;
 `;

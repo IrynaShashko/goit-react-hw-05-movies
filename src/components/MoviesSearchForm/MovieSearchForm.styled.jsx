@@ -31,18 +31,18 @@ export const Button = styled.button`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   background-image: linear-gradient(
-    to left,
-    #aeeee6,
-    #a1ece5,
-    #92eae4,
-    #83e8e3,
-    #71e6e3,
-    #65e1de,
-    #58dcd8,
-    #49d7d3,
-    #41cec7,
-    #3ac6bb,
-    #33bdb0,
-    #2db5a4
+    to right,
+    #065faf,
+    #1164b0,
+    #1b69b1,
+    #246eb2,
+    #2d73b2,
+    #3577b2,
+    #3c7ab2,
+    #437eb2,
+    #4b81b1,
+    #5385b1,
+    #5b88b0,
+    #628baf
   );
 `;
