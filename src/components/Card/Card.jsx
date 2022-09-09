@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-
 import PaginatedItems from '../Pagination/Pagination';
-
 import { fetchPopularMovies } from 'service/api/movies';
-
 import Loader from 'components/Loader/Loader';
-
 import { Ul, Li, LinkStyle, Img, P } from '../Card/Card.styled';
 
 const Card = () => {
