@@ -6,7 +6,7 @@ import { fetchMovieCasts } from 'service/api/movies';
 
 import Loader from 'components/Loader/Loader';
 
-import { Div, Ul, Li, Img, P } from '../Cast/Cast.styled';
+import { Div, Ul, Li, Img, P, Pcharacter } from '../Cast/Cast.styled';
 
 const Cast = () => {
   const [state, setState] = useState({
@@ -45,7 +45,7 @@ const Cast = () => {
 
   const { item, loading, error } = state;
 
-  const elements = item?.map(({ id, name, profile_path }) => {
+  const elements = item?.map(({ id, name, profile_path, character }) => {
     const poster = profile_path
       ? `https://image.tmdb.org/t/p/w342/${profile_path}`
       : 'https://stringfixer.com/files/951711496.jpg';
@@ -53,6 +53,9 @@ const Cast = () => {
       <Li key={id}>
         <Img src={poster} alt={name} />
         <P>{name}</P>
+        <Pcharacter>
+          <b>Character:</b> {character}
+        </Pcharacter>
       </Li>
     );
   });

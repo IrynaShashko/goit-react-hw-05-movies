@@ -27,7 +27,7 @@ const Card = () => {
   }, [pageParam, setSearchParams]);
 
   const elements = trendingMovies?.results?.map(
-    ({ id, title, poster_path }) => {
+    ({ id, title, poster_path, release_date }) => {
       const poster = `https://image.tmdb.org/t/p/w342/${poster_path}`;
       return (
         <Li key={id}>
@@ -40,7 +40,9 @@ const Card = () => {
               }
               alt={title}
             />
-            <P>{title}</P>
+            <P>
+              {title} ({release_date.slice(0, 4)})
+            </P>
           </LinkStyle>
         </Li>
       );

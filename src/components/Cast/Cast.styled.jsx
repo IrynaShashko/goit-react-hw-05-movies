@@ -10,7 +10,7 @@ export const Div = styled.div`
 export const Ul = styled.ul`
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   padding-top: 30px;
   margin: 0;
 `;
@@ -44,5 +44,12 @@ export const Img = styled.img`
 export const P = styled.p`
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+`;
+export const Pcharacter = styled.p`
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 0;
   margin: 0;
 `;
