@@ -11,16 +11,9 @@ export const Container = styled.div`
   background-image: linear-gradient(
     to right,
     #065faf,
-    #1164b0,
-    #1b69b1,
-    #246eb2,
-    #2d73b2,
-    #3577b2,
-    #3c7ab2,
-    #437eb2,
-    #4b81b1,
-    #5385b1,
-    #5b88b0,
+    #246bb0,
+    #3a76b0,
+    #4e81b0,
     #628baf
   );
   box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2),
