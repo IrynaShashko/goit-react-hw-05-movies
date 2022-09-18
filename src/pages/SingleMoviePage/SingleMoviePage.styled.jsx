@@ -99,3 +99,12 @@ export const NavLinkStyle = styled(NavLink)`
     color: #065faf;
   }
 `;
+
+export const Stars = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const Stats = styled.div`
+  margin-left: 10px;
+  font-weight: 500;
+`;

@@ -6,6 +6,8 @@ import Loader from 'components/Loader/Loader';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 import { fetchSingleMovie } from 'service/api/movies';
+import { IconContext } from 'react-icons';
+import { AiFillStar } from 'react-icons/ai';
 
 import { FiChevronsLeft } from 'react-icons/fi';
 
@@ -22,6 +24,8 @@ import {
   Li,
   Div,
   NavLinkStyle,
+  Stars,
+  Stats,
 } from './SingleMoviePage.styled';
 
 const SingleMoviePage = () => {
@@ -76,7 +80,8 @@ const SingleMoviePage = () => {
           return `${item.name} `;
         })
       : null;
-  const vote = (vote_average * 100) / 10;
+  const starArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const totalPositiveStars = Math.floor(vote_average ? vote_average : 1 / 10);
 
   return (
     <Container>
@@ -94,7 +99,28 @@ const SingleMoviePage = () => {
               {title} ({release})
             </H2>
           )}
-          {vote && <P>User score: {vote.toFixed()} %</P>}
+          {vote_average && (
+            <div>
+              <P>User score:</P>
+              <Stars>
+                {starArr.map((el, index) => (
+                  <IconContext.Provider
+                    key={index}
+                    value={{
+                      color: `${
+                        index >= totalPositiveStars ? '#ccc' : 'orange'
+                      }`,
+                    }}
+                  >
+                    <AiFillStar />
+                  </IconContext.Provider>
+                ))}
+                <Stats>
+                  {totalPositiveStars} / {starArr.length}
+                </Stats>
+              </Stars>
+            </div>
+          )}
           {overview && <H3>Overview</H3>}
           {overview && <P>{overview}</P>}
           {genres && <H3>Genres</H3>}
