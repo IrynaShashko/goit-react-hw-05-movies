@@ -101,7 +101,7 @@ const SingleMoviePage = () => {
           )}
           {vote_average && (
             <div>
-              <P>User score:</P>
+              <H3>User score:</H3>
               <Stars>
                 {starArr.map((el, index) => (
                   <IconContext.Provider

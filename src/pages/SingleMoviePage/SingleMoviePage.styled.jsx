@@ -103,8 +103,10 @@ export const NavLinkStyle = styled(NavLink)`
 export const Stars = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 export const Stats = styled.div`
   margin-left: 10px;
   font-weight: 500;
+  margin-bottom: 2px;
 `;
