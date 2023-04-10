@@ -3,29 +3,61 @@ import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  padding: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* @media screen and (max-width: 500px) {
+    margin: 30px auto;
+    width: 90%;
+    height: 90%;
+  }
+  @media screen and (max-width: 470px) {
+    padding: 30px 24px;
+  } */
 `;
 
 export const CardContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const InfoContainer = styled.div`
-  padding: 0;
+  padding: 20px;
+  @media screen and (min-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 export const Img = styled.img`
-  height: 300px;
-  margin-right: 20px;
-  margin-left: 20px;
+  /* height: 300px; */
+  width: 200px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
   border-radius: 10px;
+  @media screen and (min-width: 375px) {
+    width: 300px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 400px;
+  }
 `;
 
 export const H2 = styled.h2`
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 10px;
+  @media screen and (min-width: 467px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 export const H3 = styled.h3`
@@ -33,13 +65,25 @@ export const H3 = styled.h3`
   font-size: 20px;
   margin: 0;
   margin-bottom: 10px;
+  @media screen and (min-width: 467px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 export const P = styled.p`
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 10px;
+  @media screen and (min-width: 467px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 export const Button = styled.button`
@@ -55,6 +99,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   cursor: pointer;
+  width: 150px;
   border: none;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -70,7 +115,6 @@ export const Button = styled.button`
 `;
 
 export const Div = styled.div`
-  margin-top: 20px;
   padding: 20px;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2),
     2px 2px 2px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px 2px rgba(0, 0, 0, 0.12);

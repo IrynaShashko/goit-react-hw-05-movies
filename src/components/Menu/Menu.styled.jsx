@@ -28,7 +28,7 @@ export const Ul = styled.ul`
   margin-top: 0;
   margin-bottom: 0;
   margin-right: auto;
-  padding: 20px;
+  /* padding: 20px; */
 `;
 
 export const Li = styled.li`

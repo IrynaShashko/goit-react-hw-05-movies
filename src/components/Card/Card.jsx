@@ -41,7 +41,6 @@ const Card = () => {
               alt={title}
             />
             <P>{title}</P>
-            <p></p>
           </LinkStyle>
         </Li>
       );

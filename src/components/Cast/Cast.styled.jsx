@@ -10,9 +10,19 @@ export const Div = styled.div`
 export const Ul = styled.ul`
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  padding-top: 30px;
-  margin: 0;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 20px;
+  margin: 0 auto;
+  margin-left: -20px;
+  @media screen and (min-width: 375px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
 `;
 
 export const Li = styled.li`

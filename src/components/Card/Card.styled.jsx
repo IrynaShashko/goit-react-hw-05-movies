@@ -5,9 +5,17 @@ import { Link } from 'react-router-dom';
 export const Ul = styled.ul`
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding-top: 30px;
+  padding: 20px;
+  padding-left: 30px;
   margin: 0;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
 `;
 
 export const Li = styled.li`
