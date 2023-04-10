@@ -70,6 +70,21 @@ const SingleMoviePage = () => {
 
   const goBack = () => navigate(from);
 
+  const handleClickScroll = () => {
+    const cast = document.getElementById('cast');
+    if (cast) {
+      // 👇 Will scroll smoothly to the top of the next section
+      cast.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleClickScrollReviews = () => {
+    const reviews = document.getElementById('reviews');
+    if (reviews) {
+      // 👇 Will scroll smoothly to the top of the next section
+      reviews.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const { poster_path, title, genres, release_date, vote_average, overview } =
     state.item;
   const image = `https://image.tmdb.org/t/p/w342/${poster_path}`;
@@ -132,21 +147,31 @@ const SingleMoviePage = () => {
         <Ul>
           <Li>
             {genres && (
-              <NavLinkStyle state={{ from }} to={`/movies/${id}/cast`}>
+              <NavLinkStyle
+                onClick={handleClickScroll}
+                id="cast"
+                state={{ from }}
+                to={`/movies/${id}/cast`}
+              >
                 Cast
               </NavLinkStyle>
             )}
           </Li>
           <Li>
             {genres && (
-              <NavLinkStyle state={{ from }} to={`/movies/${id}/reviews`}>
+              <NavLinkStyle
+                onClick={handleClickScrollReviews}
+                id="reviews"
+                state={{ from }}
+                to={`/movies/${id}/reviews`}
+              >
                 Reviews
               </NavLinkStyle>
             )}
           </Li>
         </Ul>
+        <Outlet />
       </Div>
-      <Outlet />
     </Container>
   );
 };
